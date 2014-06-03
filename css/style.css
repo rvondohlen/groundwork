@@ -1,8 +1,8 @@
 .nav {
 	position: fixed;
 	right:30px;
-	top:25%;
-	width: 600px;
+	top:30%;
+	width: 200px;
 }
 
 
@@ -16,11 +16,12 @@
 .nav ul li {
 	text-align: right;
 	height: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .nav ul li a {
-	font-size: 50px;	
+	font-size: 40px;
+	line-height: 40px;	
 }
 
 
@@ -65,7 +66,12 @@ body > span.tip-left {
 
 }
 
-.chapter {
-	margin-bottom: 100px;
+body > section > div.row > div > h3:nth-child(1) {
+	margin-top: 200px;
+	margin-bottom: 50px;
+}
+
+body > section > div.row > div > p:last-child {
+	margin-bottom: 200px;
 }
 

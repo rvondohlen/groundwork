@@ -1,3 +1,61 @@
+.nav {
+	position: fixed;
+	right:30px;
+	top:25%;
+	width: 600px;
+}
+
+
+.nav ul {
+	text-align: right;
+	list-style: none;
+	height: 120px;
+
+}
+
+.nav ul li {
+	text-align: right;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.nav ul li a {
+	font-size: 50px;	
+}
+
+
+.has-tip {
+	border: none;
+
+	-webkit-transition: color .25s ease-in-out;
+	-moz-transition: color .25s ease-in-out;
+	-ms-transition: color .25s ease-in-out;
+	-o-transition: color .25s ease-in-out;
+	transition: color .25s ease-in-out;
+}
+
+.has-tip:hover {
+	border: none;
+	color:#dedede;
+}
+
+.tooltip {
+	min-width: 90px;
+	border-radius: 4px;
+	text-align: center;
+}
+
+
+span.tip-left {
+	position: fixed;
+}
+
+body > span.tip-left {
+	margin-right: 100px;
+
+	font-size: 9px;
+}
+
 .full {
 	padding-top: 100px;
 	background-color: #efefef;
@@ -10,3 +68,4 @@
 .chapter {
 	margin-bottom: 100px;
 }
+

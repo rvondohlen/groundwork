@@ -1,8 +1,8 @@
 .nav {
 	position: fixed;
-	right:30px;
+	right: 20px;
 	top:30%;
-	width: 200px;
+	width: 300px;
 }
 
 
@@ -20,8 +20,10 @@
 }
 
 .nav ul li a {
+	display: block;	
 	font-size: 40px;
 	line-height: 40px;	
+	width: 24px;
 }
 
 

@@ -70,7 +70,7 @@ body > span.tip-left {
 	border-top: 12px solid #dcdcdc;
 	border-bottom: 12px solid #fff;
 
-
+	z-index:1000;
 }
 
 body > section > div.row > div > h3:nth-child(1) {
@@ -82,3 +82,20 @@ body > section > div.row > div > p:last-child {
 	margin-bottom: 200px;
 }
 
+.sticky {
+	position: fixed;
+	top:-30px;
+	width: 200%;
+	height:30px;
+	background-color: lightblue;
+	z-index:90;
+
+	border-left: 350px solid lightblue;
+	margin-left:-350px;
+	padding-top: 4px;
+}
+
+.sticky h3 {
+	font-size: 12px;
+	color:#fff;
+}

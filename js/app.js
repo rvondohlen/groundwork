@@ -1,4 +1,4 @@
-
+// dot navigation
 
 $(document).ready(function($){
     
@@ -20,9 +20,6 @@ $(document).ready(function($){
         var position = $(document).scrollTop(),
             index;
         
-        console.log("Scroll:"+ position);
-
-        //- (groundwork.y/2)
 
         for (var i=0; i<chapterPosition.length; i++) {
             if (position   <= chapterPosition[i] + chapterHeight[i]){
@@ -35,13 +32,16 @@ $(document).ready(function($){
         }
         
         $('.nav ul li a').removeClass('active');
-        $('.nav ul li a:eq('+index+')').addClass('active');
-    });
+            $('.nav ul li a:eq('+index+')').addClass('active');
+
+            // n
+            $('.section:eq('+index+') div div .sticky').animate({top: "0"}, 500, function() {});
+        });
     
         $('.nav ul li a').click(function () {
-        $('.nav ul li a').removeClass('active');
-            $(this).addClass('active');
-    });   
+            $('.nav ul li a').removeClass('active');
+                $(this).addClass('active');
+        });   
 
 });
 

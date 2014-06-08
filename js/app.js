@@ -1,54 +1,49 @@
 
 
-
-// $(function() {
-//   $('a[href*=#]:not([href=#])').click(function() {
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: target.offset().top
-//         }, 1000);
-//         return false;
-//       }
-//     }
-//   });
-// });
-
-    $(document).ready(function($){
-        var chapterPosition = [];
-        $('.full').each(function() {
-            chapterPosition.push($(this).offset().top);
-        });
-        
-        $('a').click(function(){
-            $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 500);
-            return false;
-        });
-        
-        $(document).on('scroll', function() {
-            var position = $(document).scrollTop(),
-                index;
-            
-            for (var i=0; i<chapterPosition.length; i++) {
-                if (position - 200 <= chapterPosition[i]) {
-                    index = i;
-                    break;
-                }
-            }
-            
-            $('.nav ul li a').removeClass('active');
-            $('.nav ul li a:eq('+index+')').addClass('active');
-        });
-        
-            $('.nav ul li a').click(function () {
-            $('.nav ul li a').removeClass('active');
-                $(this).addClass('active');
-        });   
+$(document).ready(function($){
+    
+    var chapterPosition = [];
+    var chapterHeight = [];
+    $('.section').each(function() {
+        chapterPosition.push($(this).offset().top);
+        chapterHeight.push($(this).height());
     });
+    
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 750);
+        return false;
+    });
+    
+    $(document).on('scroll', function() {
+        var position = $(document).scrollTop(),
+            index;
+        
+        console.log("Scroll:"+ position);
+
+        //- (groundwork.y/2)
+
+        for (var i=0; i<chapterPosition.length; i++) {
+            if (position   <= chapterPosition[i] + chapterHeight[i]){
+                
+                index = i;
+                break;
+                
+                
+            }
+        }
+        
+        $('.nav ul li a').removeClass('active');
+        $('.nav ul li a:eq('+index+')').addClass('active');
+    });
+    
+        $('.nav ul li a').click(function () {
+        $('.nav ul li a').removeClass('active');
+            $(this).addClass('active');
+    });   
+
+});
 
 // logic for getting current window size for title page scaling
 

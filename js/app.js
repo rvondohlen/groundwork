@@ -1,9 +1,51 @@
-// dot navigation
+//global object to hold all vars
 
-$(document).ready(function($){
+var app = {};
+
+document.addEventListener("DOMContentLoaded", function() {    
+
     
+    // logic for getting current window size for title page scaling
+
+    var getWindowSize = function() {
+        var w = window,
+            d = document,
+            e = d.documentElement,
+            g = d.getElementsByTagName('body')[0],
+            x = w.innerWidth || e.clientWidth || g.clientWidth,
+            y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+            app.x = x;
+            app.y = y;
+
+    }
+
+    var fullscreenElements = function(matchClass) {
+        var elements = document.getElementsByTagName('div'),i;
+        for (i in elements) {
+            if((" "+elements[i].className+" ").indexOf(" "+matchClass+" ") > -1){
+                elements[i].style.width = app.x + "px";
+                elements[i].style.height = app.y + "px";
+            }
+           
+        }
+
+    }
+    getWindowSize();
+    fullscreenElements('full');
+
+    window.onresize = function() {
+        getWindowSize();
+        fullscreenElements('full');
+    }
+
+    // dot navigation
+
+    
+
     var chapterPosition = [];
     var chapterHeight = [];
+    
     $('.section').each(function() {
         chapterPosition.push($(this).offset().top);
         chapterHeight.push($(this).height());
@@ -43,43 +85,14 @@ $(document).ready(function($){
                 $(this).addClass('active');
         });   
 
+
 });
 
-// logic for getting current window size for title page scaling
 
-var app = {};
 
-var getWindowSize = function() {
-	var w = window,
-		d = document,
-    	e = d.documentElement,
-    	g = d.getElementsByTagName('body')[0],
-    	x = w.innerWidth || e.clientWidth || g.clientWidth,
-    	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-    	app.x = x;
-    	app.y = y;
 
-}
 
-var fullscreenElements = function(matchClass) {
-	var elements = document.getElementsByTagName('div'),i;
-    for (i in elements) {
-        if((" "+elements[i].className+" ").indexOf(" "+matchClass+" ") > -1){
-            elements[i].style.width = app.x + "px";
-            elements[i].style.height = app.y + "px";
-        }
-       
-    }
-
-}
-getWindowSize();
-fullscreenElements('full');
-
-window.onresize = function() {
-	getWindowSize();
-	fullscreenElements('full');
-}
 
 
 

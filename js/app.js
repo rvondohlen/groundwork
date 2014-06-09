@@ -22,7 +22,7 @@ $(document).ready(function($){
         
 
         for (var i=0; i<chapterPosition.length; i++) {
-            if (position   <= chapterPosition[i] + chapterHeight[i]){
+            if (position <= chapterPosition[i] + chapterHeight[i] -2){
                 
                 index = i;
                 break;
@@ -47,7 +47,7 @@ $(document).ready(function($){
 
 // logic for getting current window size for title page scaling
 
-var groundwork = {};
+var app = {};
 
 var getWindowSize = function() {
 	var w = window,
@@ -57,8 +57,8 @@ var getWindowSize = function() {
     	x = w.innerWidth || e.clientWidth || g.clientWidth,
     	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-    	groundwork.x = x;
-    	groundwork.y = y;
+    	app.x = x;
+    	app.y = y;
 
 }
 
@@ -66,8 +66,8 @@ var fullscreenElements = function(matchClass) {
 	var elements = document.getElementsByTagName('div'),i;
     for (i in elements) {
         if((" "+elements[i].className+" ").indexOf(" "+matchClass+" ") > -1){
-            elements[i].style.width = groundwork.x + "px";
-            elements[i].style.height = groundwork.y + "px";
+            elements[i].style.width = app.x + "px";
+            elements[i].style.height = app.y + "px";
         }
        
     }

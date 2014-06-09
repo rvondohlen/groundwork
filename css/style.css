@@ -16,15 +16,16 @@
 
 .nav ul li {
 	text-align: center;
-	height: 30px;
-	margin-bottom: 10px;
+	height: 40px;
 }
 
 .nav ul li a {
 	display: block;	
 	font-size: 60px;
-	line-height: 40px;	
+	line-height: 40px;
 	width: 40px;
+	height: 40px;
+	overflow: hidden;
 }
 
 .nav ul li a.active {
@@ -90,8 +91,8 @@ body > section > div.row > div > p:last-child {
 	background-color: lightblue;
 	z-index:90;
 
-	border-left: 350px solid lightblue;
-	margin-left:-350px;
+	border-left: 2000px solid lightblue;
+	margin-left:-2000px;
 	padding-top: 4px;
 }
 

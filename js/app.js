@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var chapterPosition = [];
     var chapterHeight = [];
-    
+
     $('.section').each(function() {
         chapterPosition.push($(this).offset().top);
         chapterHeight.push($(this).height());
@@ -72,12 +72,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 
             }
         }
-        
+
+       
         $('.nav ul li a').removeClass('active');
             $('.nav ul li a:eq('+index+')').addClass('active');
 
-            // n
-            $('.section:eq('+index+') div div .sticky').animate({top: "0"}, 500, function() {});
+            // $('.section:eq('+index+') div div .sticky').animate({top: "0"}, 500, function() {});
+        
         });
     
         $('.nav ul li a').click(function () {
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });   
 
 
-});
+    });
 
 
 

@@ -3,9 +3,23 @@ body{
 	font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3, h4, h5{
+	font-weight: 700;
+}
+
+h4{
+	font-size: 28px;
+	color:rgb(100, 74, 110);
+}
+
 p {
-	line-height: 1.7; /* default is 1.6 */
+	letter-spacing: 0.03rem;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.8; /* default is 1.6 */
 	margin-bottom: 50px; /* default is 20px */
+	color: #444;
 }
 
 /* Structure */

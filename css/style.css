@@ -1,4 +1,7 @@
 /* Typography */
+body{
+	font-family: 'Lato', sans-serif;
+}
 
 p {
 	line-height: 1.7; /* default is 1.6 */

@@ -1,77 +1,17 @@
-.nav {
-	position: fixed;
-	right: 10px;
-	top:50%;
-	width: 40px;
-	height: 120px;
-	margin-top: -60px;
+/* Typography */
+
+p {
+	line-height: 1.7; /* default is 1.6 */
+	margin-bottom: 50px; /* default is 20px */
 }
 
-
-.nav ul {
-	list-style: none;
-	margin: 0;
-
-}
-
-.nav ul li {
-	text-align: center;
-	height: 40px;
-}
-
-.nav ul li a {
-	display: block;	
-	font-size: 60px;
-	line-height: 40px;
-	width: 40px;
-	height: 40px;
-	overflow: hidden;
-}
-
-.nav ul li a.active {
-	color:#0F587E;
-}
-
-
-.has-tip {
-	border: none;
-
-	-webkit-transition: color .25s ease-in-out;
-	-moz-transition: color .25s ease-in-out;
-	-ms-transition: color .25s ease-in-out;
-	-o-transition: color .25s ease-in-out;
-	transition: color .25s ease-in-out;
-}
-
-.has-tip:hover {
-	border: none;
-	color:#dedede;
-}
-
-.tooltip {
-	min-width: 90px;
-	border-radius: 4px;
-	text-align: center;
-}
-
-
-span.tip-left {
-	position: fixed;
-}
-
-body > span.tip-left {
-	margin-right: 100px;
-
-	font-size: 9px;
-}
+/* Structure */
 
 .full {
 	padding-top: 100px;
 	background-color: #efefef;
 	border-top: 12px solid #dcdcdc;
 	border-bottom: 12px solid #fff;
-
-	z-index:1000;
 }
 
 body > section > div.row > div > h3:nth-child(1) {
@@ -82,6 +22,12 @@ body > section > div.row > div > h3:nth-child(1) {
 body > section > div.row > div > p:last-child {
 	margin-bottom: 200px;
 }
+
+.row > div {
+	margin-top:100px;
+}
+
+/* Chapter Identifiers */
 
 .sticky {
 	position: fixed;
@@ -111,6 +57,76 @@ body > section > div.row > div > p:last-child {
 	color:#fff;
 }
 
-.row > div {
-	margin-top:100px;
+/* Dot Navigation */
+
+.nav {
+	position: fixed;
+	right: 10px;
+	top:50%;
+	width: 40px;
+	height: 120px;
+	margin-top: -60px;
 }
+
+
+.nav ul {
+	list-style: none;
+	margin: 0;
+}
+
+.nav ul li {
+	text-align: center;
+	height: 40px;
+}
+
+.nav ul li a {
+	display: block;	
+	font-size: 60px;
+	line-height: 40px;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+}
+
+.nav ul li a.active {
+	color:#0F587E;
+}
+
+	/* Tooltips */
+
+	.has-tip {
+		border: none;
+
+		-webkit-transition: color .25s ease-in-out;
+		-moz-transition: color .25s ease-in-out;
+		-ms-transition: color .25s ease-in-out;
+		-o-transition: color .25s ease-in-out;
+		transition: color .25s ease-in-out;
+	}
+
+	.has-tip:hover {
+		border: none;
+		color:#dedede;
+	}
+
+	.tooltip {
+		min-width: 90px;
+		border-radius: 4px;
+		text-align: center;
+	}
+
+
+	span.tip-left {
+		position: fixed;
+	}
+
+	body > span.tip-left {
+		margin-right: 100px;
+		font-size: 9px;
+	}
+
+
+
+
+
+

@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
     }
+
     getWindowSize();
     fullscreenElements('full');
 
@@ -73,21 +74,27 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-       
-        $('.nav ul li a').removeClass('active');
-            $('.nav ul li a:eq('+index+')').addClass('active');
 
-            // $('.section:eq('+index+') div div .sticky').animate({top: "0"}, 500, function() {});
+        $('.nav ul li a').removeClass('active');
         
-        });
-    
-        $('.nav ul li a').click(function () {
-            $('.nav ul li a').removeClass('active');
-                $(this).addClass('active');
-        });   
+        $('.nav ul li a:eq('+index+')').addClass('active');
 
 
     });
+    
+    $('.nav ul li a').click(function () {
+        $('.nav ul li a').removeClass('active');
+            $(this).addClass('active');
+    });   
+
+    // sticky chapter notifiers using waypoints.js
+
+    $('.sticky').waypoint('sticky');
+
+
+});
+
+
 
 
 

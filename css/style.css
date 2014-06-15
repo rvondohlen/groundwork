@@ -49,10 +49,12 @@ body > section > div.row > div > p:last-child {
 .sticky {
 	position: fixed;
 	top:-30px;
-	width: 200%;
+	width: 400%;
+	overflow: visible;
 	height:30px;
 	background-color: lightblue;
 	z-index:90;
+	opacity: 0.8;
 
 	border-left: 2000px solid lightblue;
 	margin-left:-2000px;

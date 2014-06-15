@@ -2,7 +2,7 @@
 
 var app = {};
 
-document.addEventListener("DOMContentLoaded", function() {    
+
 
     
     // logic for getting current window size for title page scaling
@@ -89,10 +89,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // sticky chapter notifiers using waypoints.js
 
-    $('.sticky').waypoint('sticky');
 
+    $(document).on('scroll', function() {
+        var position = $(document).scrollTop(),
+            index;
+        
 
-});
+        for (var i=0; i<chapterPosition.length; i++) {
+            //if (position <= (chapterPosition[i] + (app.y)) + (chapterHeight[i] - (app.y))) {
+            if (position <= chapterPosition[i] + chapterHeight[i] ) {
+                
+                index = i;
+                break;
+                
+                
+            }else{
+                index = 0;
+            }
+        }
+
+        $('section div.row div div').removeClass('sticky-show');
+
+        if( index >= 1){
+
+            
+            
+            $('section:eq('+index+') div.row div div').addClass('sticky-show');
+
+        }
+
+    });
+
 
 
 

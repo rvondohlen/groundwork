@@ -80,7 +80,7 @@ body > section > div.row > div > p:last-child {
 
 .nav {
 	position: fixed;
-	right: 10px;
+	right: 0;
 	top:50%;
 	width: 40px;
 	height: 120px;
@@ -146,6 +146,13 @@ body > section > div.row > div > p:last-child {
 	}
 
 
+
+
+.caption {
+	color: #cdcdcd;
+	font-size: 0.8rem;
+	font-style: italic;
+}
 
 
 
